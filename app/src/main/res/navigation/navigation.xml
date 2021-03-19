@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/futbolistasFragment">
+    <fragment
+        android:id="@+id/futbolistasFragment"
+        android:name="com.example.futbol.FutbolistasFragment"
+        android:label="fragment_futbolistas"
+        tools:layout="@layout/fragment_futbolistas" >
+        <action
+            android:id="@+id/action_futbolistasFragment_to_futbolistasKFragment"
+            app:destination="@id/futbolistasKFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/futbolistasKFragment"
+        android:name="com.example.futbol.FutbolistasKFragment"
+        android:label="fragment_futbolistas_k"
+        tools:layout="@layout/fragment_futbolistas_k" >
+        <action
+            android:id="@+id/action_futbolistasKFragment_to_futbolistaFragment"
+            app:destination="@id/futbolistaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/futbolistaFragment"
+        android:name="com.example.futbol.FutbolistaFragment"
+        android:label="fragment_futbolista"
+        tools:layout="@layout/fragment_futbolista" >
+        <argument
+            android:name="futbolista"
+            app:argType="com.example.futbol.Futbolistas" />
+    </fragment>
+</navigation>
